@@ -1,0 +1,242 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Reset & Base Layout --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #333333;
+    background-color: #fcfcfc;
+}
+
+.container {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* --- Clean Sidebar Design --- */
+.sidebar {
+    width: 28%;
+    padding-right: 3rem;
+}
+
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid #e2e8f0;
+}
+
+.sidebar h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar .title {
+    font-weight: 500;
+    color: #2b6cb0; /* Academic Slate Blue */
+    margin-bottom: 0.2rem;
+}
+
+.sidebar .institution, .sidebar .department {
+    font-size: 0.9rem;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+.sidebar .location, .sidebar .office {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 0.8rem;
+}
+
+.sidebar i {
+    margin-right: 0.4rem;
+    width: 14px;
+}
+
+/* --- Sidebar Social Icons --- */
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #4a5568;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #2b6cb0;
+}
+
+/* --- Main Content Layout --- */
+.content {
+    width: 72%;
+    border-left: 1px solid #e2e8f0;
+    padding-left: 3rem;
+}
+
+section {
+    margin-bottom: 3.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a202c;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+    text-align: justify;
+}
+
+strong {
+    color: #1a202c;
+}
+
+/* --- Specific Components Styling --- */
+.interests-list {
+    list-style: none;
+}
+
+.interests-list li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.interests-list i {
+    color: #2b6cb0;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.pub-item {
+    background: #f7fafc;
+    border-left: 4px solid #2b6cb0;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.2rem;
+}
+
+.pub-authors {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 0.2rem;
+}
+
+.pub-venue {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 0.6rem;
+}
+
+.btn-sm {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    color: #4a5568;
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-sm:hover {
+    background: #2b6cb0;
+    color: #ffffff;
+    border-color: #2b6cb0;
+}
+
+/* --- Timeline Layout --- */
+.timeline-item {
+    margin-bottom: 1.2rem;
+}
+
+.timeline-item h4 {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.timeline-detail {
+    font-size: 0.95rem;
+}
+
+/* --- Tables Layout --- */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table td {
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.95rem;
+    vertical-align: top;
+}
+
+.skills-table td:first-child {
+    width: 25%;
+    color: #2d3748;
+}
+
+footer {
+    margin-top: 5rem;
+    border-top: 1px solid #edf2f7;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+/* --- Responsive Adaptability --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .profile-img {
+        margin: 0 auto 1.5rem auto;
+    }
+    .content {
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+    }
+}
