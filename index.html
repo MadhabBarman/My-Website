@@ -35,24 +35,29 @@
 
         <main class="content">
             
-            <section id="about">
+            <nav class="tab-navbar">
+                <button class="tab-btn active" onclick="switchTab(event, 'about')">About Me</button>
+                <button class="tab-btn" onclick="switchTab(event, 'publications')">Research & Publications</button>
+                <button class="tab-btn" onclick="switchTab(event, 'teaching')">Teaching</button>
+                <button class="tab-btn" onclick="switchTab(event, 'skills')">Skills</button>
+            </nav>
+
+            <div id="about" class="tab-content active-content">
                 <h2>About Me</h2>
                 <p>I am an academic researcher working at the intersection of rigorous mathematical theory, data science frameworks, and scalable computational tools. Currently, I am a Postdoctoral Fellow in the Decision Sciences Department at the Indian Institute of Management Bangalore (IIMB). Prior to my current role, I conducted research at Sorbonne University Abu Dhabi focusing on pairing deep learning frameworks with real-world datasets.</p>
                 <p>My core research concentrates on developing data-driven statistical modeling for spatial scaling in <strong>Extreme Value Theory (EVT)</strong>. I apply these methodologies to investigate infrastructure resilience (such as power grids) and climate variables (including rainfall and temperature processes).</p>
-            </section>
-
-            <section id="interests">
-                <h2>Research Focus</h2>
+                
+                <h3 style="margin: 2rem 0 1rem 0; color: #0f172a; font-size: 1.1rem;">Primary Research Focus</h3>
                 <ul class="interests-list">
                     <li><i class="fa-solid fa-chevron-right"></i> Extreme Value Theory (EVT) & Spatial Extremes</li>
                     <li><i class="fa-solid fa-chevron-right"></i> Spatial Scaling & Data-driven Statistical Modeling</li>
                     <li><i class="fa-solid fa-chevron-right"></i> Machine Learning & Epidemic-informed Deep Learning</li>
                     <li><i class="fa-solid fa-chevron-right"></i> Optimization in Data Science</li>
                 </ul>
-            </section>
+            </div>
 
-            <section id="publications">
-                <h2>Selected Research</h2>
+            <div id="publications" class="tab-content">
+                <h2>Selected Research & Publications</h2>
                 
                 <div class="pub-item">
                     <p class="pub-title">Data-Driven Estimation of Rare Event Probabilities for Spatial Extremes and Its Applications</p>
@@ -73,9 +78,9 @@
                         <a href="#" class="btn-sm"><i class="fa-solid fa-file-lines"></i> Abstract</a>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section id="teaching">
+            <div id="teaching" class="tab-content">
                 <h2>Teaching Portfolio</h2>
                 <p class="teaching-philosophy">My teaching philosophy centers on pairing abstract, rigorous mathematical foundations with modern computational validation. I focus heavily on instructing students in the mathematics of data science while running concurrent hands-on environments via coding frameworks.</p>
                 
@@ -91,12 +96,12 @@
                         <div class="time-header">
                             <h4>Subject Matter Expert</h4>
                         </div>
-                        <p class="time-body">Served as an online educator and expert for Calculus and Real Analysis, focusing on delivering crystal-clear, highly responsive guidance to break down advanced theoretical calculus concepts for a diverse, international student body.</p>
+                        <p class="time-body">Served as an online educator and expert for Calculus and Real Analysis, focusing on delivering crystal-clear, highly responsive guidance to break down advanced theoretical calculus concepts for a global student body.</p>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section id="skills">
+            <div id="skills" class="tab-content">
                 <h2>Technical Toolkit</h2>
                 <table class="skills-table">
                     <tr>
@@ -105,14 +110,14 @@
                     </tr>
                     <tr>
                         <td><strong>Methodologies</strong></td>
-                        <td>Extreme Value Analysis, Spatial Processes, Deep Learning, Mathematical Optimization</td>
+                        <td>Extreme Value Analysis, Spatial Modeling, Deep Learning, Mathematical Optimization</td>
                     </tr>
                     <tr>
                         <td><strong>Libraries & tools</strong></td>
                         <td>Tidyverse, PyTorch, NumPy, Scikit-Learn, LaTeX, Git & Version Control</td>
                     </tr>
                 </table>
-            </section>
+            </div>
 
             <footer>
                 <p>&copy; 2026 Dr. Madhab Barman. Built natively using HTML5 & CSS3.</p>
@@ -120,6 +125,22 @@
 
         </main>
     </div>
+
+    <script>
+        function switchTab(event, tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active-content'));
+
+            // Remove active status from all tab buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show current target tab content and set button style to active
+            document.getElementById(tabId).classList.add('active-content');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
